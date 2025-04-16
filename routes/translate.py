@@ -51,7 +51,7 @@ def translateText(request):
              
             translated_text =  response_data['candidates'][0]['content']['parts'][0]['text']
             
-             
+            print(str(translated_text))
             try:
                 translated_result = json.loads(translated_text)
                 return True, {
