@@ -15,4 +15,4 @@ def translation_route():
     else: 
     
  
-     return False, {"error": response or "Empty response from translation API"}
+     return False, {"error": response }
