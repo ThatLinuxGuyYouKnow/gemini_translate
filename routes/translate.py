@@ -45,7 +45,7 @@ def translateText(request):
         if response.status_code == 200:
             response_data = response.json()
              
-            translated_text = response_data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
+            translated_text = response=  response_data['candidates'][0]['content']['parts'][0]['text']['original_text']
             
              
             try:
