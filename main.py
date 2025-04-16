@@ -9,4 +9,8 @@ CORS(app)
 
 @app.route('/translate')
 def translation_route():
-    translateText(request)
+    status,response = translateText(request)
+    if status:
+       return jsonify(response),200
+    else: 
+        return jsonify({"error": response.get("error","unknown error occcured")}),400
