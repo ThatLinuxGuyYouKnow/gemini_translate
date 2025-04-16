@@ -62,4 +62,5 @@ def translateText(request):
             return False, {"error": response.text}
 
     except Exception as e:
-         return False, {"error":e}
+     return False, {"error": str(e)}
+

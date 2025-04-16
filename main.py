@@ -13,4 +13,6 @@ def translation_route():
     if status:
        return jsonify(response),200
     else: 
-        return jsonify({"error": response.get("error","unknown error occcured")}),400
+    
+ 
+     return False, {"error": response.text or "Empty response from translation API"}
