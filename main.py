@@ -7,7 +7,7 @@ app = Flask(__name__)
  
 CORS(app)  
 
-@app.route('/translate')
+@app.route('/translate', methods = ['POST'])
 def translation_route():
     status,response = translateText(request)
     if status:
