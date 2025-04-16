@@ -31,7 +31,11 @@ def translateText(request):
                         }
                     ]
                 }
-            ]
+            ], "generationConfig":{
+               "response_mime_type": "application/json",
+               "temperature": 0.3,
+                "top_p": 1.0
+            }
         }
 
         # Make the API request
@@ -45,7 +49,7 @@ def translateText(request):
         if response.status_code == 200:
             response_data = response.json()
              
-            translated_text =  response_data['candidates'][0]['content']['parts'][0]['text'] 
+            translated_text =  response_data['candidates'][0]['content']['parts'][0]['text']
             
              
             try:
