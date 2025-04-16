@@ -12,7 +12,6 @@ def translation_route():
     status,response = translateText(request)
     if status:
        return jsonify(response),200
-    else: 
-    
- 
-     return False, {"error": response }
+    else:
+     return jsonify({"error": response}), 400
+
