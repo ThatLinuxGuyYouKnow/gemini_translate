@@ -56,7 +56,7 @@ def translateText(request):
                 translated_result = json.loads(translated_text)
                 return True, {
                     "original_text": text_to_convert,
-                    "translated_text": translated_result.get("original_text"),
+                    "translated_text": translated_result.get("translated_text"),
                     "incorrect_original_language": "false"
                 }
             except json.JSONDecodeError:
