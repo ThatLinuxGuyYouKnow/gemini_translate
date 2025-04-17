@@ -17,7 +17,7 @@ def translateText(request):
          
         prompt: str = (
             f"Translate the following text from {original_language} to {target_language}: "
-            f"{text_to_convert}. Return the result in JSON format: "
+            f"{text_to_convert}. Return ONLY  the result in JSON format: "
             '{"original_text": "translated_text"}'
         )
 
